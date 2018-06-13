@@ -32,6 +32,7 @@
 		BF12372520D197AB0035A2A4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12372420D197AB0035A2A4 /* TableViewCell.swift */; };
 		BF12372720D197B50035A2A4 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12372620D197B50035A2A4 /* FilterTableViewCell.swift */; };
 		BF12372920D197F20035A2A4 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF12372820D197F20035A2A4 /* Detail.storyboard */; };
+		BF3C192520D1A2CC007BB3F4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C192420D1A2CC007BB3F4 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		BF12372420D197AB0035A2A4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BF12372620D197B50035A2A4 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		BF12372820D197F20035A2A4 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		BF3C192420D1A2CC007BB3F4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				BF12371320D1959D0035A2A4 /* Notification+Extension.swift */,
+				BF3C192420D1A2CC007BB3F4 /* Color+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				BF12370D20D195830035A2A4 /* Annotation.swift in Sources */,
 				BF12371F20D1963C0035A2A4 /* MainViewController.swift in Sources */,
 				BF12370F20D195870035A2A4 /* GPSHelper.swift in Sources */,
+				BF3C192520D1A2CC007BB3F4 /* Color+Extension.swift in Sources */,
 				BF12371120D1958A0035A2A4 /* MapHelper.swift in Sources */,
 				BF12372120D1963C0035A2A4 /* FilterViewController.swift in Sources */,
 				BF12371420D1959D0035A2A4 /* Notification+Extension.swift in Sources */,

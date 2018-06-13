@@ -260,21 +260,26 @@
                                 </constraints>
                             </view>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" id="BkQ-iq-Qeh">
-                            <view key="customView" contentMode="scaleToFill" id="P1p-M2-YDg">
-                                <rect key="frame" x="288" y="6" width="71" height="32"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="CLE-f2-2VQ">
+                            <view key="customView" userInteractionEnabled="NO" contentMode="scaleToFill" id="SU2-fW-Gwn">
+                                <rect key="frame" x="276" y="5.5" width="83" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZb-ln-teT">
-                                        <rect key="frame" x="41" y="0.0" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQb-ph-73e">
+                                        <rect key="frame" x="-8" y="-0.5" width="83" height="33"/>
                                         <state key="normal" image="StarOff"/>
                                         <connections>
-                                            <action selector="starButtonPressed:" destination="FOL-6Q-Djg" eventType="touchUpInside" id="FrG-vU-cvp"/>
+                                            <action selector="starButtonPressed:" destination="FOL-6Q-Djg" eventType="touchUpInside" id="Fxm-CA-1WO"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MQb-ph-73e" firstAttribute="height" secondItem="SU2-fW-Gwn" secondAttribute="height" id="24h-ub-3V2"/>
+                                    <constraint firstItem="MQb-ph-73e" firstAttribute="width" secondItem="SU2-fW-Gwn" secondAttribute="width" id="APE-31-g04"/>
+                                    <constraint firstItem="MQb-ph-73e" firstAttribute="centerY" secondItem="SU2-fW-Gwn" secondAttribute="centerY" id="Yx9-hE-pIv"/>
+                                    <constraint firstAttribute="trailing" secondItem="MQb-ph-73e" secondAttribute="trailing" constant="8" id="fuC-j9-LbW"/>
+                                </constraints>
                             </view>
                         </barButtonItem>
                     </navigationItem>
@@ -283,7 +288,7 @@
                         <outlet property="filterButton" destination="ufK-2x-vAv" id="3Iy-59-bbH"/>
                         <outlet property="gpsHelper" destination="5db-jg-1u5" id="Rbi-kd-Iqt"/>
                         <outlet property="noLocationView" destination="EU2-CG-G12" id="5y2-pi-RjX"/>
-                        <outlet property="starButton" destination="KZb-ln-teT" id="Uei-zq-l4h"/>
+                        <outlet property="starButton" destination="MQb-ph-73e" id="eRB-8b-nwm"/>
                         <outlet property="tableView" destination="yZ1-TC-HOY" id="hSH-tw-W4w"/>
                         <segue destination="zfg-zu-5hc" kind="show" identifier="DetailViewSegueID" id="lje-AB-zxZ"/>
                     </connections>
@@ -398,6 +403,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="StarOff" width="50" height="50"/>
+        <image name="StarOff" width="24" height="24"/>
     </resources>
 </document>
