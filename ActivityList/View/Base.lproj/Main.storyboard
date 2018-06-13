@@ -240,7 +240,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-2x-vAv">
-                                        <rect key="frame" x="8" y="1.5" width="51" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="0.39198318119999997" green="0.25841218230000002" blue="0.63630270960000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Filter">
@@ -253,10 +253,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="top" secondItem="kdK-90-9Lh" secondAttribute="top" constant="1.5" id="im1-4D-FuF"/>
-                                    <constraint firstAttribute="trailing" secondItem="ufK-2x-vAv" secondAttribute="trailing" constant="24" id="oQc-Tw-xvk"/>
-                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="leading" secondItem="kdK-90-9Lh" secondAttribute="leading" constant="8" id="x7g-c0-AGY"/>
-                                    <constraint firstAttribute="bottom" secondItem="ufK-2x-vAv" secondAttribute="bottom" constant="1.5" id="yjW-LR-w4Y"/>
+                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="centerY" secondItem="kdK-90-9Lh" secondAttribute="centerY" id="M1S-5O-JFw"/>
+                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="width" secondItem="kdK-90-9Lh" secondAttribute="width" id="RIJ-AX-KH2"/>
+                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="centerX" secondItem="kdK-90-9Lh" secondAttribute="centerX" id="Xl5-OG-cUE"/>
+                                    <constraint firstItem="ufK-2x-vAv" firstAttribute="height" secondItem="kdK-90-9Lh" secondAttribute="height" id="kEH-32-vKM"/>
                                 </constraints>
                             </view>
                         </barButtonItem>
@@ -266,7 +266,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQb-ph-73e">
-                                        <rect key="frame" x="-8" y="-0.5" width="83" height="33"/>
+                                        <rect key="frame" x="0.0" y="-0.5" width="83" height="33"/>
                                         <state key="normal" image="StarOff"/>
                                         <connections>
                                             <action selector="starButtonPressed:" destination="FOL-6Q-Djg" eventType="touchUpInside" id="Fxm-CA-1WO"/>
@@ -275,10 +275,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="MQb-ph-73e" firstAttribute="centerX" secondItem="SU2-fW-Gwn" secondAttribute="centerX" id="1ul-kn-hA4"/>
                                     <constraint firstItem="MQb-ph-73e" firstAttribute="height" secondItem="SU2-fW-Gwn" secondAttribute="height" id="24h-ub-3V2"/>
                                     <constraint firstItem="MQb-ph-73e" firstAttribute="width" secondItem="SU2-fW-Gwn" secondAttribute="width" id="APE-31-g04"/>
                                     <constraint firstItem="MQb-ph-73e" firstAttribute="centerY" secondItem="SU2-fW-Gwn" secondAttribute="centerY" id="Yx9-hE-pIv"/>
-                                    <constraint firstAttribute="trailing" secondItem="MQb-ph-73e" secondAttribute="trailing" constant="8" id="fuC-j9-LbW"/>
                                 </constraints>
                             </view>
                         </barButtonItem>
