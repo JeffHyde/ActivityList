@@ -32,6 +32,7 @@
 		BF12372720D197B50035A2A4 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12372620D197B50035A2A4 /* FilterTableViewCell.swift */; };
 		BF12372920D197F20035A2A4 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF12372820D197F20035A2A4 /* Detail.storyboard */; };
 		BF3C192520D1A2CC007BB3F4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C192420D1A2CC007BB3F4 /* Color+Extension.swift */; };
+		BF64CD7120D82C5C001AE486 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = BF64CD7020D82C5C001AE486 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		BF12372620D197B50035A2A4 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		BF12372820D197F20035A2A4 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		BF3C192420D1A2CC007BB3F4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		BF64CD7020D82C5C001AE486 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		BF1236C220D194EE0035A2A4 = {
 			isa = PBXGroup;
 			children = (
+				BF64CD7020D82C5C001AE486 /* Readme.md */,
 				BF1236CD20D194EE0035A2A4 /* ActivityList */,
 				BF1236E520D194EF0035A2A4 /* ActivityListTests */,
 				BF1236F020D194EF0035A2A4 /* ActivityListUITests */,
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF64CD7120D82C5C001AE486 /* Readme.md in Resources */,
 				BF1236DC20D194EF0035A2A4 /* LaunchScreen.storyboard in Resources */,
 				BF1236D920D194EF0035A2A4 /* Assets.xcassets in Resources */,
 				BF1236D420D194EE0035A2A4 /* Main.storyboard in Resources */,
