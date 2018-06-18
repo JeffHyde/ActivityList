@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BF1236CF20D194EE0035A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1236CE20D194EE0035A2A4 /* AppDelegate.swift */; };
-		BF1236D120D194EE0035A2A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1236D020D194EE0035A2A4 /* ViewController.swift */; };
 		BF1236D420D194EE0035A2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1236D220D194EE0035A2A4 /* Main.storyboard */; };
 		BF1236D720D194EE0035A2A4 /* ActivityList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF1236D520D194EE0035A2A4 /* ActivityList.xcdatamodeld */; };
 		BF1236D920D194EF0035A2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF1236D820D194EF0035A2A4 /* Assets.xcassets */; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		BF1236CB20D194EE0035A2A4 /* ActivityList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1236CE20D194EE0035A2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF1236D020D194EE0035A2A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF1236D320D194EE0035A2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF1236D620D194EE0035A2A4 /* ActivityList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityList.xcdatamodel; sourceTree = "<group>"; };
 		BF1236D820D194EF0035A2A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				BF1236CE20D194EE0035A2A4 /* AppDelegate.swift */,
-				BF1236D020D194EE0035A2A4 /* ViewController.swift */,
 				BF12371220D195940035A2A4 /* Model */,
 				BF12371520D195AB0035A2A4 /* Extension */,
 				BF12371820D196200035A2A4 /* View */,
@@ -350,7 +347,6 @@
 				BF12370920D1957E0035A2A4 /* Venue.swift in Sources */,
 				BF12370520D195770035A2A4 /* Data.swift in Sources */,
 				BF12372520D197AB0035A2A4 /* TableViewCell.swift in Sources */,
-				BF1236D120D194EE0035A2A4 /* ViewController.swift in Sources */,
 				BF12370B20D195800035A2A4 /* Location.swift in Sources */,
 				BF12370120D195700035A2A4 /* Alert.swift in Sources */,
 				BF12372720D197B50035A2A4 /* FilterTableViewCell.swift in Sources */,
