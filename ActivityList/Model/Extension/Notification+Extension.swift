@@ -11,4 +11,5 @@ import Foundation
 extension Notification.Name {
     static let dataComplete = Notification.Name("DataComplete")
     static let noLocation = Notification.Name("NoLocation")
+    
 }

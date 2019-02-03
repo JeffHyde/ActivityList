@@ -12,4 +12,5 @@ class Location: Decodable {
     var latitude: Double?
     var longitude: Double?
     var type: String?
+    
 }

@@ -21,7 +21,7 @@ class Event: Decodable {
     let type: String?
     let venue: Venue?
     
-    //Image Not Decoded.  So we need CodingKeys to exclude the UIImage
+    //Image Not Decodable.
     var image: UIImage?
     //
     
@@ -52,14 +52,14 @@ class Event: Decodable {
     
     func getImage(completion: @escaping (_ image:UIImage) -> Void)  {
         if let link = image_link {
-        if let url = URL(string: link) {
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                if let data = data {
-                    self.image = UIImage(data:data)
-                    completion(UIImage(data:data)!)
-                }
-            }).resume()
-        }
+            if let url = URL(string: link) {
+                URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                    if let data = data {
+                        self.image = UIImage(data:data)
+                        completion(UIImage(data:data)!)
+                    }
+                }).resume()
+            }
         }
     }
     

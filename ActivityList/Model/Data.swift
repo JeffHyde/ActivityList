@@ -14,10 +14,8 @@ struct Strings {
     static let dataUrlString = "http://goo.gl/MdV1uB"
 }
 
-struct Defaults {
-    static let userDefaults = UserDefaults.standard
+struct DefaultKeys {
     static let favoriteActivitiesKey = "FavoriteActivitiesDefaultsKey"
-    
 }
 
 class DataHelper {
@@ -26,9 +24,15 @@ class DataHelper {
     static var mainData = [Event]()
     static var activitySelectionData = [String]()
     
-    // TODO: change to desired distance from users in meters
+    //TODO: Desired distance from users in meters
     static let maxDistance:Double = 28000000.00
     //
+    
+    static func setFavorites() {
+        if UserDefaults.standard.value(forKey: DefaultKeys.favoriteActivitiesKey) != nil {
+            DataHelper.shared.favoriteActivities = UserDefaults.standard.value(forKey: DefaultKeys.favoriteActivitiesKey) as! [String]
+        }
+    }
     
     static func upDateData() {
         Caller.getEvents(urlString: Strings.dataUrlString) { ( events) in
@@ -72,5 +76,6 @@ class DataHelper {
         }
         return filterByDistance(filteredEvents)
     }
+    
 }
 

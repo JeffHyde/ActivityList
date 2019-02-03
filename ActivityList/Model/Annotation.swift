@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class Annotation: NSObject,MKAnnotation {
+class Annotation: NSObject, MKAnnotation {
     
     let title: String?
     let subtitle: String?
@@ -19,14 +19,16 @@ class Annotation: NSObject,MKAnnotation {
     var imageURL: String?
     let coordinate: CLLocationCoordinate2D
     
-    init(title: String?, subtitle: String?, address: String?, name: String?, coordinate: CLLocationCoordinate2D)
-    {
+    init(title: String?,
+         subtitle: String?,
+         address: String?,
+         name: String?,
+         coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.subtitle = subtitle
         self.name = name
         self.address = address
         self.coordinate = coordinate
-        
         super.init()
     }
     

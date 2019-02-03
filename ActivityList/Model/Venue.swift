@@ -13,6 +13,7 @@ class Venue: Decodable {
     var location: Location?
     var name: String?
     var type: String?
+    
 }
 
 

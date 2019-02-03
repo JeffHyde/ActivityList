@@ -27,29 +27,27 @@ class GPSHelper:NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         UserLocation.shared.location = location
-        print("USER LOCATION *** \(String(describing: UserLocation.shared.location?.coordinate.latitude))")
         if UserLocation.shared.location != nil {
             locationManager.stopUpdatingLocation()
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case CLAuthorizationStatus.authorizedWhenInUse:
             GPSHelper.userLocationState = .accepted
             getStateStatus()
-            print("Authorized")
         case CLAuthorizationStatus.denied:
             GPSHelper.userLocationState = .denied
             getStateStatus()
-            print("Denied")
         case CLAuthorizationStatus.notDetermined:
             GPSHelper.userLocationState = .notDetermined
             getStateStatus()
-            print("Not determined")
         default:
             break
         }
@@ -58,21 +56,21 @@ class GPSHelper:NSObject, CLLocationManagerDelegate {
     func getStateStatus() {
         let notification = Notification(name: .noLocation)
         NotificationCenter.default.post(notification)
-        if GPSHelper.userLocationState == .denied || GPSHelper.userLocationState == .notDetermined {
+        if GPSHelper.userLocationState == .denied ||
+            GPSHelper.userLocationState == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else if GPSHelper.userLocationState == .accepted {
             DataHelper.upDateData()
         }
     }
     
-    
 }
-
 
 enum UserLocationState {
     case accepted
     case denied
     case notDetermined
+    
 }
 
 class UserLocation {
