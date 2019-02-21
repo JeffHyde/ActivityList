@@ -11,7 +11,6 @@ import UIKit
 import MapKit
 
 class Annotation: NSObject, MKAnnotation {
-    
     let title: String?
     let subtitle: String?
     var name: String?

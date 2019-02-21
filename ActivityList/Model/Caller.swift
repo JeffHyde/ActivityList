@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class Caller {
-    static func getEvents(urlString: String,
+    class func getEvents(urlString: String,
                           completion:  @escaping ([Event]) -> ()) {
         var events = [Event]()
         let jsonURLString = urlString

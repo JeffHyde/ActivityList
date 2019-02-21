@@ -28,13 +28,13 @@ class DataHelper {
     static let maxDistance:Double = 28000000.00
     //
     
-    static func setFavorites() {
+    class func setFavorites() {
         if UserDefaults.standard.value(forKey: DefaultKeys.favoriteActivitiesKey) != nil {
             DataHelper.shared.favoriteActivities = UserDefaults.standard.value(forKey: DefaultKeys.favoriteActivitiesKey) as! [String]
         }
     }
     
-    static func upDateData() {
+    class func upDateData() {
         Caller.getEvents(urlString: Strings.dataUrlString) { ( events) in
             mainData = events
             var activitySelectionSet = Set<String>()
@@ -50,7 +50,7 @@ class DataHelper {
         }
     }
     
-    static func filterByDistance(_ events:[Event]) -> [Event] {
+    class func filterByDistance(_ events:[Event]) -> [Event] {
         let filteredEvents = events.filter { event -> Bool in
             if let lat = event.venue?.location?.latitude,
                 let long = event.venue?.location?.longitude,
@@ -67,7 +67,7 @@ class DataHelper {
         return filteredEvents
     }
     
-    static func filterByActivity(filters: [String]) -> [Event]  {
+    class func filterByActivity(filters: [String]) -> [Event]  {
         let filteredEvents = mainData.filter { event -> Bool in
             if let activity = event.activity  {
                 return filters.contains(activity)

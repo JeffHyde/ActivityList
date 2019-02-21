@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 class MapHelper {
-    static func setUpMap(mapView: MKMapView,
+    class func setUpMap(mapView: MKMapView,
                          latitude: Double,
                          longitude: Double,
                          cameraDistance: CLLocationDistance,
@@ -34,8 +34,9 @@ class MapHelper {
                                      fromDistance: cameraDistance,
                                      pitch: 0,
                                      heading: 0)
+        guard let userLocation = UserLocation.shared.location else {return}
         let heading = getBearingBetweenTwoPoints(point1: location,
-                                                 point2: UserLocation.shared.location!)
+                                                 point2:userLocation)
         let rotationCamera = MKMapCamera(lookingAtCenter: pinLocation,
                                          fromDistance: cameraDistance,
                                          pitch: cameraPitch,
@@ -50,15 +51,15 @@ class MapHelper {
         }
     }
     
-    static func degreesToRadians(degrees: Double) -> Double {
+    class func degreesToRadians(degrees: Double) -> Double {
         return degrees * .pi / 180.0
     }
     
-    static func radiansToDegrees(radians: Double) -> Double {
+    class func radiansToDegrees(radians: Double) -> Double {
         return radians * 180.0 / .pi
     }
     
-    static func getBearingBetweenTwoPoints(point1 : CLLocation,
+    class func getBearingBetweenTwoPoints(point1 : CLLocation,
                                            point2 : CLLocation) -> Double {
         let lat1 = degreesToRadians(degrees: point1.coordinate.latitude)
         let lon1 = degreesToRadians(degrees: point1.coordinate.longitude)
@@ -71,7 +72,7 @@ class MapHelper {
         return radiansToDegrees(radians: radiansBearing)
     }
     
-    static func getDistanceFromUser(lat: Double,
+    class func getDistanceFromUser(lat: Double,
                                     long: Double) -> String {
         if let userLat = UserLocation.shared.location?.coordinate.latitude,
             let userLong = UserLocation.shared.location?.coordinate.longitude {

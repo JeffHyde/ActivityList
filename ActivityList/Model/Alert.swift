@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class Alert {
+struct Alert {
     static func showAlertActionSheetForNavigation(coordinate:CLLocationCoordinate2D,
                                                   address: String?,
                                                   title: String,

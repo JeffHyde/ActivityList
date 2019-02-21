@@ -31,34 +31,34 @@ class DetailViewController: UIViewController {
     func setUpMapGetPlaceMark() {
         latitude = data?.venue?.location?.latitude
         longitude = data?.venue?.location?.longitude
-        if let lat = latitude,
-            let long = longitude {
-            MapHelper.setUpMap(mapView: self.mapView,
-                               latitude: lat,
-                               longitude: long,
-                               cameraDistance: self.cameraDistance,
-                               cameraPitch: self.cameraPitch)
-            nameLabel.text = data?.name
-            timeLabel.text = data?.time
-            descriptionLabel.text = data?.description
-            distanceLabel.text = MapHelper.getDistanceFromUser(lat: lat,
-                                                               long: long)
-            let coord = CLLocationCoordinate2D.init(latitude: lat,
-                                                    longitude: long)
-            let anno = Annotation(title: data?.name,
-                                  subtitle: data?.venue?.address,
-                                  address: data?.venue?.address,
-                                  name: data?.name,
-                                  coordinate: coord)
-            self.mapView.addAnnotation(anno)
-        }
+        guard let lat = latitude, let long = longitude else {return}
+        MapHelper.setUpMap(mapView: self.mapView,
+                           latitude: lat,
+                           longitude: long,
+                           cameraDistance: self.cameraDistance,
+                           cameraPitch: self.cameraPitch)
+        
+        let coord = CLLocationCoordinate2D.init(latitude: lat,
+                                                longitude: long)
+        let anno = Annotation(title: data?.name,
+                              subtitle: data?.venue?.address,
+                              address: data?.venue?.address,
+                              name: data?.name,
+                              coordinate: coord)
+        
+        mapView.addAnnotation(anno)
+        nameLabel.text = data?.name
+        timeLabel.text = data?.time
+        descriptionLabel.text = data?.description
+        distanceLabel.text = MapHelper.getDistanceFromUser(lat: lat,
+                                                           long: long)
     }
     
     @IBAction func navigatePressed(_ sender: UIButton) {
         if let lat = latitude, let long = longitude {
-            Alert.showAlertActionSheetForNavigation(coordinate: CLLocationCoordinate2DMake(lat,
-                                                                                           long),
-                                                    address: data?.venue?.address, title: "",
+            Alert.showAlertActionSheetForNavigation(coordinate: CLLocationCoordinate2DMake(lat,long),
+                                                    address: data?.venue?.address,
+                                                    title: "",
                                                     description: "Warning: You will leave this app and we will show you directions using Apple's Maps app.",
                                                     cancelButtonTitle: "Cancel",
                                                     navigateTitle: "Route me!",

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class Event: Decodable {
-    
     let activity: String?
     let description: String?
     let image_link: String?
